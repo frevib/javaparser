@@ -337,6 +337,9 @@ public class ParserConfiguration {
      * Disabled by default.
      * When this is enabled, LexicalPreservingPrinter.print can be used to reproduce
      * the original formatting of the file.
+     *
+     * Using LexicalPreservationEnabled will cause a significant increase in heap memory.
+     * Use PhantomNodeLogic.cleanUpCache() to reclaim heap memory after done printing all parsed data.
      */
     public ParserConfiguration setLexicalPreservationEnabled(boolean lexicalPreservationEnabled) {
         this.lexicalPreservationEnabled = lexicalPreservationEnabled;
